@@ -51,4 +51,4 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 ./credential-report.sh
 ```
 
-3) Wait 120 seconds (update line 7 to 300s, or larger, depending on the size of your organization / AWS account; **Wait time is used for the _IAM Credential Report_ to complete before the rest of the script runs**), then wait for the rest of the script to complete.
+3) Wait 120 seconds (update part of line 7 to read ```300s```, or larger, depending on the size of your organization / AWS account; **Wait time is used for the _IAM Credential Report_ to complete before the rest of the script runs**), then wait for the rest of the script to complete.
