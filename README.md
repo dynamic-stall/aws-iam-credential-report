@@ -31,7 +31,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 * **AWS CLI** (refer to [this link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for install instructions)
    * If you aren't familiar with the ```aws configure``` process, refer to [the following](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-* Miniconda (3.x)** (install script for Linux](./Miniconda3-py39_4.9.2-Linux-x86_64.sh) is included in this repo)
+* **Miniconda (3.x)** (install script for Linux](./Miniconda3-py39_4.9.2-Linux-x86_64.sh) is included in this repo)
 
 * (Preferably) a **Linux distro** (ideally, a RH-based distro or Amazon Linux)
 
