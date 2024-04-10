@@ -10,7 +10,7 @@ You can modify this for your account/organization needs, as well as add the ```-
 
 <br>
 
-**NOTE** My Python is quite basic. Obviously, feel free to modify this script to suit your own data cleansing workflow. The most important parts are the AWS commands; y'all can do what you want from there!
+**NOTE:** My Python is quite basic. Obviously, feel free to modify this script to suit your own data cleansing workflow. The most important parts are the AWS commands; y'all can do what you want from there!
 
 <br>
 
