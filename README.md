@@ -31,7 +31,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 * **AWS CLI** (refer to [this link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for install instructions)
    * If you aren't familiar with the ```aws configure``` process, refer to [the following](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 
-* **Miniconda (3.x)** (install script for Linux](./Miniconda3-py39_4.9.2-Linux-x86_64.sh) is included in this repo)
+* **Miniconda (3.x)** (install script is included in this repo; it should install the latest ver. of Miniconda3 based on your OS)
 
 * (Preferably) a **Linux distro** (ideally, a RH-based distro or Amazon Linux)
 
@@ -39,16 +39,28 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 # Instructions
 
-1) Install Miniconda by running:
+1) Install Miniconda by running the install script. This will install in the local git repo, as the ```credential-report.sh``` script relies on it being there. **If Miniconda (or Python) is already installed, be sure to modify line 34 of the reporting script** to point to your install location:
 
 ```bash
-./Miniconda3-py39_4.9.2-Linux-x86_64.sh
+./install-miniconda3.sh
+```
+   * (**NOTE:** If you have trouble with the install script due to your machine type (i.e., janky install on a Raspberry Pi, etc.), I recommend consulting one of the following links:
+      * https://repo.anaconda.com/miniconda/
+      * https://chat.openai.com/chat
+      * https://gemini.google.com/app
+
+   * **NOTE II:** Script requires ```sudo``` privilege.
+
+2) Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing:
+
+```bash
+pip install pandas numpy
 ```
 
-2) Run the ```credential-report.sh``` script
+3) Run the ```credential-report.sh``` script
 
 ```bash
 ./credential-report.sh
 ```
 
-3) Wait 120 seconds (update part of line 7 to read ```300s```, or larger, depending on the size of your organization / AWS account; **Wait time is used for the _IAM Credential Report_ to complete before the rest of the script runs**), then wait for the rest of the script to complete.
+4) Wait 120 seconds (update part of line 7 to read ```300s``` or larger depending on the size of your organization / AWS account; **Wait time is used for the _IAM Credential Report_ to complete before the rest of the script runs**), then wait for the rest of the script to complete (the script will tell you which step is processing via ```echo``` commands).

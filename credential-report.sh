@@ -30,7 +30,7 @@ cd -
 
 # Data cleansing with Python (3.9)
 echo "Cleaning and formatting Credential Report..."
-../miniconda3/bin/python3 - << EOF
+/usr/bin/python3 - << EOF
 
 import pandas as pd
 import numpy as np
