@@ -45,7 +45,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
       * https://chat.openai.com/chat
       * https://gemini.google.com/app
 
-   * **NOTE II:** Script requires ```sudo``` privilege.
+   * **NOTE II:** Script may require ```sudo``` privilege. Also, be sure to add Miniconda/Python to your PATH environment, if it doesn't happen by default.
 
 2) Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing:
 
