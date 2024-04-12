@@ -6,7 +6,7 @@
 
 <br>
 
-You can modify this for your account/organization needs, as well as add the ```--profile``` option if the AWS account in question is segmented as such. I will add a template for this option to the script (eventually).
+You can modify this for your account/organization needs, as well as add the ```--profile``` option if the AWS account in question is segmented as such.
 
 <br>
 
@@ -35,7 +35,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 # Instructions
 
-1) Install Miniconda by running the install script. This will install in the local git repo, as the ```credential-report.sh``` script relies on it being there. **If Miniconda (or Python) is already installed, be sure to modify line 34 of the reporting script** to point to your install location:
+1) Install Miniconda by running the install script. This will install in the local git repo, as the ```credential-report.sh``` script relies on it being there. **If Miniconda (or Python) is already installed and located somewhere not in the usual ```/usr/bin/```, be sure to modify line 34 of the reporting script** (currently reads, ```miniconda3```) to point to your install location:
 
 ```bash
 ./install-miniconda3.sh
