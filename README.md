@@ -22,10 +22,6 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 <br>
 
-**FINALLY**, I would always use Excel ot create an additional column used to identify whether a user's password needs to be changed. I'll include that formula here in a few days (most likely; ...once I remember it, LOL) (you could also use a Python script to accomplish this).
-
-<br>
-
 # Requirements
 
 * **AWS CLI** (refer to [this link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for install instructions)

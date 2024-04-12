@@ -7,9 +7,7 @@ echo "Pausing for 2 minutes..."
 sleep 120s
 
 # Pull Credential Report from AWS Console and convert it from base64 to human-readable format
-aws iam get-credential-report --output text --query Content | base64 -d > raw-$ts.csv
-
-cp raw-$ts.csv raw.csv
+aws iam get-credential-report --output text --query Content | base64 -d > raw.csv
 
 # Gathering user GROUP and attached POLICY data, then formatting it into a single dataframe for later use.
 echo "Processing IAM User Group and Policy affiliations..."
@@ -30,7 +28,7 @@ cd -
 
 # Data cleansing with Python (3.9)
 echo "Cleaning and formatting Credential Report..."
-/usr/bin/python3 - << EOF
+miniconda3 - << EOF
 
 import pandas as pd
 import numpy as np
