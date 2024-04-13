@@ -24,7 +24,7 @@ echo "onepiece,doesexist" > all-blue.csv
 paste -d "\n" groups/* > all-grp.csv
 paste -d "\n" policies/* > all-pol.csv
 paste -d "," all-grp.csv all-pol.csv >> all-blue.csv
-cd -
+cd ..
 
 # Data cleansing with Python (3.9)
 echo "Cleaning and formatting Credential Report..."
@@ -48,7 +48,7 @@ mv report.csv iam-report-$ts.csv
 rm raw.csv
 rm -rf list
 
-#Push the latest IAM report to S3 bucket, 'iam-report'
+# Push the latest IAM report to S3 bucket, 'iam-report'
 #aws s3 cp iam-report-$ts.csv s3://iam-report/
 
 echo "IAM Report complete!"
