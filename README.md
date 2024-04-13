@@ -33,7 +33,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 * **Miniconda (3.x)** or Python3 (install script is included in this repo; it should install the latest ver. of Miniconda3 based on your OS)
 
-* (Preferably) a **Linux distro** (ideally, a RH-based distro or Amazon Linux)
+* Some kind of **Linux distro** (ideally, a RH-based distro or Amazon Linux); WSL works...
 
 <br>
 
