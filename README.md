@@ -14,6 +14,10 @@ You can modify this for your account/organization needs, as well as add the ```-
 
 <br>
 
+**NOTE II:** Speaking of Python, take some time to read through the data cleansing section, particularly _line 38_. Some of the columns I dropped may be useful for your needs; just delete them from the purge, if that is the case.
+
+<br>
+
 In previous roles I've worked, I always pushed this to a centralized S3 bucket for centralized access and back-up purposes. This part of the script (at the bottom) is commented out. Modify that part per your S3 bucket name or get rid of it if you have a different workflow.
 
 <br>
