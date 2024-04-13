@@ -18,7 +18,7 @@ You can modify this for your account/organization needs, as well as add the ```-
 
 <br>
 
-In previous roles I've worked, I always pushed this to a centralized S3 bucket for centralized access and back-up purposes. This part of the script (at the bottom) is commented out. Modify that part per your S3 bucket name or get rid of it if you have a different workflow.
+In previous roles I've worked, I always pushed this to an S3 bucket for centralized access and back-up purposes. This part of the script (at the bottom) is commented out. Modify that part per your S3 bucket name or get rid of it if you have a different workflow.
 
 <br>
 
