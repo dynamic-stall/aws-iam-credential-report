@@ -26,7 +26,7 @@ paste -d "\n" policies/* > all-pol.csv
 paste -d "," all-grp.csv all-pol.csv >> all-blue.csv
 cd ..
 
-# Data cleansing with Python (3.9)
+# Data cleansing with Python (3.x)
 echo "Cleaning and formatting Credential Report..."
 miniconda3 - << EOF
 
