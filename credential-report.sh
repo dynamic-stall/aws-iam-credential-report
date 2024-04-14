@@ -28,14 +28,14 @@ cd ..
 
 # Data cleansing with Python (3.x)
 echo "Cleaning and formatting Credential Report..."
-miniconda3 - << EOF
+python3 - << EOF
 
 import pandas as pd
 import numpy as np
 
 creds=pd.read_csv('./raw.csv')
 creds.insert(loc=0,column='row_num',value=np.arange(len(creds)))
-creds=creds.drop(['arn','user_creation_time','password_next_rotation','access_key_1_last_rotated','access_key_1_last_used_region','access_key_2_last_rotated','access_key_2_last_used_region','cert_1_active','cert_1_last_rotated','cert_2_active','cert_2_last_rotated'],axis=1)
+creds=creds.drop(['arn','user_creation_time','access_key_1_last_used_region','access_key_2_last_used_region','cert_1_last_rotated','cert_2_last_rotated'],axis=1)
 creds.set_index('row_num',inplace=True)
 affiliate=pd.read_csv('./list/all-blue.csv',names=['user_group','user_attached_policy'])
 onepiece=creds.join(affiliate)
