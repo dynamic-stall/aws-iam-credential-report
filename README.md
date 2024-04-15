@@ -39,7 +39,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 # Instructions
 
-1) Install Miniconda by running the install script. **If Miniconda (or Python) is already installed and located somewhere not in the usual ```/usr/bin/```, be sure to modify line 34 of the reporting script** (currently reads, ```miniconda3```) to point to your install location:
+1) Install Miniconda by running the install script. **If Miniconda (or Python) is already installed, besure to modify line 34 of ```credential-report.sh``` to point to your install location:
 
 ```bash
 ./install-miniconda3.sh
@@ -49,9 +49,20 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
       * https://chat.openai.com/chat
       * https://gemini.google.com/app
 
-   * **NOTE II:** Script may require ```sudo``` privilege. Also, be sure to add Miniconda/Python to your ```PATH``` environment, if it doesn't happen by default.
+   * **NOTE II:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```) (replace ```<username>``` with your actual username, of course!).
 
-2) Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing:
+```bash
+export PATH="/home/<username>/miniconda3/bin:$PATH"
+```
+
+   * **NOTE III:** Source (reload) the config file for changes to take effect immediately:
+
+```bash
+source ~/.bashrc  # or source ~/.zshrc  depending on your shell
+```
+
+
+2) Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing (if you're familiar with venv's, do your thing; if not, forget I said anything):
 
 ```bash
 pip install pandas numpy
