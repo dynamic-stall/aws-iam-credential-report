@@ -2,7 +2,7 @@
 
 <br>
 
-**BLUF:** This repo contains a script used to pull IAM user metrics from an AWS account and output it as a ```.csv``` file. The script first performs an _IAM Credential Report_ for username and password data (PW age, console/programmatic access, service last used, etc.), then pulls in group policy and attached user policy information per user. The user data is organized and cleaned using Bash and Python commands.
+**BLUF:** This repo contains a script used to pull IAM user metrics from an AWS account and output it as a ```.csv``` file. The script first performs an _IAM Credential Report_ for username, password, and access key data (PW/key age, console/programmatic access, service last used, etc.), then pulls in group policy and attached user policy information per user. The user data is organized and cleaned using Bash and Python commands, respectively.
 
 <br>
 
@@ -39,26 +39,26 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 # Instructions
 
-1) Install Miniconda by running the install script. **If Miniconda (or Python) is already installed, besure to modify line 34 of ```credential-report.sh``` to point to your install location:
+1) Install Miniconda by running the install script. If Miniconda (or Python) is already installed, be sure to modify **line 31** of ```credential-report.sh``` to point to your installation:
 
 ```bash
 ./install-miniconda3.sh
 ```
-   * (**NOTE:** If you have trouble with the install script due to your machine type (i.e., janky install on a Raspberry Pi, etc.), I recommend consulting one of the following links:
+   * (**NOTE:** If you have trouble with the install script due to your machine type (i.e., janky OS install on a Raspberry Pi, etc.), I recommend consulting one of the following links:
       * https://repo.anaconda.com/miniconda/
       * https://chat.openai.com/chat
       * https://gemini.google.com/app
 
-   * **NOTE II:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```) (replace ```<username>``` with your actual username, of course!).
+   * **NOTE II.I:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```) (replace ```<username>``` with your actual username, of course!):
 
 ```bash
 export PATH="/home/<username>/miniconda3/bin:$PATH"
 ```
 
-   * **NOTE III:** Source (reload) the config file for changes to take effect immediately:
+   * **NOTE II.II:** Source (reload) the config file for changes to take effect immediately:
 
 ```bash
-source ~/.bashrc  # or source ~/.zshrc  depending on your shell
+source ~/.bashrc  # or source ~/.zshrc depending on your shell
 ```
 
 
@@ -68,7 +68,7 @@ source ~/.bashrc  # or source ~/.zshrc  depending on your shell
 pip install pandas numpy
 ```
 
-3) Run the ```credential-report.sh``` script
+3) Run the ```credential-report.sh``` script:
 
 ```bash
 ./credential-report.sh
