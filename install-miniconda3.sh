@@ -43,7 +43,7 @@ install_miniconda() {
 
     # Install Miniconda3
     echo "Installing Miniconda3..."
-    sudo bash Miniconda3-latest*.sh -b -p /usr/bin/miniconda3
+    sudo bash Miniconda3-latest*.sh -b -p ~/miniconda3
 
     # Cleanup
     rm Miniconda3-latest*.sh
