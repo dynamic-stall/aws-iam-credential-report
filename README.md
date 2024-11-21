@@ -52,7 +52,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
    * **NOTE II.I:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```) (replace ```<username>``` with your actual username, of course!):
 
 ```bash
-export PATH="/home/$USER/miniconda3/bin:$PATH"
+export PATH="~/miniconda3/bin:$PATH"
 ```
 
    * **NOTE II.II:** Source (reload) the config file for changes to take effect immediately:
