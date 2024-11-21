@@ -49,7 +49,7 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
       * https://chat.openai.com/chat
       * https://gemini.google.com/app
 
-   * **NOTE II.I:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```) (replace ```<username>``` with your actual username, of course!):
+   * **NOTE II.I:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```):
 
 ```bash
 export PATH="$HOME/miniconda3/bin:$PATH"
@@ -61,6 +61,11 @@ export PATH="$HOME/miniconda3/bin:$PATH"
 source ~/.bashrc  # or source ~/.zshrc depending on your shell
 ```
 
+   * **NOTE II.III:** _(Optional)_ Run ```which``` to confirm Python3 is being called from the newly installed Miniconda binaries directory (rather than the system bin directory):
+
+```bash
+which python3
+```
 
 2) Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing (if you're familiar with venv's, do your thing; if not, forget I said anything):
 
