@@ -7,6 +7,6 @@ row_num,user,password_enabled,password_last_used,password_last_changed,password_
 6,lie.ren,true,no_information,2021-04-29T04:00:08+00:00,2021-07-28T04:00:08+00:00,False,False,,,,False,,,,False,False,,
 7,nora.valkyrie,true,no_information,2021-04-29T04:00:06+00:00,2021-07-28T04:00:06+00:00,False,False,,,,False,,,,False,False,,
 8,ruby.rose,true,no_information,2021-04-13T04:30:27+00:00,2021-07-12T04:30:27+00:00,False,False,,,,False,,,,False,False,console-read-only,
-9,tfadmin,true,2024-02-06T18:12:15+00:00,2024-01-06T18:26:01+00:00,2024-04-05T18:26:01+00:00,True,True,2022-02-20T18:09:24+00:00,2024-04-01T05:00:00+00:00,ec2,True,2023-08-03T18:44:38+00:00,2024-04-12T02:02:00+00:00,iam,False,False,admin,IAMUserChangePassword
+9,(redacted),true,2024-02-06T18:12:15+00:00,2024-01-06T18:26:01+00:00,2024-04-05T18:26:01+00:00,True,True,2022-02-20T18:09:24+00:00,2024-04-01T05:00:00+00:00,ec2,True,2023-08-03T18:44:38+00:00,2024-04-12T02:02:00+00:00,iam,False,False,admin,IAMUserChangePassword
 10,weiss.schnee,true,no_information,2021-04-13T04:30:27+00:00,2021-07-12T04:30:27+00:00,False,False,,,,False,,,,False,False,console-read-only,
 11,yang.xiaolong,true,no_information,2021-04-13T04:30:27+00:00,2021-07-12T04:30:27+00:00,False,False,,,,False,,,,False,False,console-read-only,
