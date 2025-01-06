@@ -39,44 +39,29 @@ I've included a sample output report using dummy IAM users in my personal AWS ac
 
 # Instructions
 
-1) Install Miniconda by running the install script. If Miniconda (or Python) is already installed, be sure to modify **line 31** of ```credential-report.sh``` to point to your installation:
+1. Install Miniconda by running the install script. If Miniconda (or Python) is already installed, be sure to modify **line 31** of ```credential-report.sh``` to point to your installation:
 
 ```bash
 ./install-miniconda3.sh
 ```
-   * (**NOTE:** If you have trouble with the install script due to your machine type (i.e., janky OS install on a Raspberry Pi, etc.), I recommend consulting one of the following links:
-      * https://repo.anaconda.com/miniconda/
-      * https://chat.openai.com/chat
-      * https://gemini.google.com/app
+   * (**NOTE:** If you have trouble with the install script due to your machine type (i.e., janky OS install on a Raspberry Pi, etc.), I recommend consulting the [official documentation](https://repo.anaconda.com/miniconda/).
 
-   * **NOTE II.I:** Be sure to add Miniconda/Python to your ```PATH``` environment in your shell config file (```.bashrc``` or ```.zshrc```):
-
+2. (Optional, but recommended) Create a virtual conda environment to avoid potential conflicts with other Python packages you may work with in the future:
 ```bash
-export PATH="$HOME/miniconda3/bin:$PATH"
+conda create -n iam_report python=3.12
+conda activate iam_report
 ```
 
-   * **NOTE II.II:** Source (reload) the config file for changes to take effect immediately:
-
-```bash
-source ~/.bashrc  # or source ~/.zshrc depending on your shell
-```
-
-   * **NOTE II.III:** _(Optional)_ Run ```which``` to confirm Python3 is being called from the newly installed Miniconda binaries directory (rather than the system bin directory):
-
-```bash
-which python3
-```
-
-2) Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing (if you're familiar with venv's, do your thing; if not, forget I said anything):
+3. Install **Pandas** and **Numpy** Python libraries (if not already present), which the script requires for data cleansing:
 
 ```bash
 pip install pandas numpy
 ```
 
-3) Run the ```credential-report.sh``` script:
+4. Run the ```credential-report.sh``` script:
 
 ```bash
 ./credential-report.sh
 ```
 
-4) Wait 120 seconds (update part of line 7 to read ```300s``` or larger depending on the size of your organization / AWS account; **Wait time is used for the _IAM Credential Report_ to complete before the rest of the script runs**), then wait for the rest of the script to complete (the script will tell you which step is processing via ```echo``` commands).
+5. Wait 120 seconds (update part of line 7 to read ```300s``` or larger depending on the size of your organization / AWS account; **Wait time is used for the _IAM Credential Report_ to complete before the rest of the script runs**), then wait for the rest of the script to complete (the script will tell you which step is processing via ```echo``` commands).
